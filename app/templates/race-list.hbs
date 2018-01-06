@@ -1,0 +1,20 @@
+<div class="jumbo">
+    <div class="right tomster"></div>
+    <h2>Races!</h2>
+    <p>We hope you find exactly what you're looking for in a place to race.</p>
+    {{#link-to 'about' class="button"}} About Us {{/link-to}}
+</div>
+{{#each model as |race|}}
+<article class="listing">
+    <h3>{{race.name}}</h3>
+    <div class="detail type">
+        <span>Type:</span> {{race.date}}
+    </div>
+    <div class="detail location">
+        <span>Location:</span> {{race.cost}}
+    </div>
+    <div class="detail location">
+        <span>Distance:</span> {{race.distance}}
+    </div>
+</article>
+{{/each}}

@@ -1,6 +1,21 @@
 export default function() {
   this.namespace = '/api';
 
+  this.get('/races', function() {
+    return {
+      data: [{
+        type: 'races',
+        id: '1',
+        attributes: {
+          name: '100K Fun Run',
+          description: 'Marathon',
+          date: 'NOW',
+          cost: '$$$$',
+        }
+      }]
+    };
+  });
+
   this.get('/rentals', function() {
     return {
       data: [{
